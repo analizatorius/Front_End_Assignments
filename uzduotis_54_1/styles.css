@@ -1,0 +1,43 @@
+.spring, .summer, .autumn, .winter{
+    border-color: GoldenRod;
+    border-style: solid;
+    margin: -3px;
+    padding: 10px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 40px;
+
+}
+
+
+.spring{
+    border-width: 9px 0px 0px 10px;
+    background: linear-gradient(150deg, rgba(34,139,34,.25) 40%, rgba(255,215,0,0.3) 80%)
+
+}
+
+.summer{
+    border-width: 8px 7px 0px 0px;
+    background: linear-gradient(300deg, LightYellow 40%, rgba(255,215,0,0.3) 80%)
+
+}
+
+.autumn{
+    border-width: 0px 6px 5px 0px;
+    background: linear-gradient(340deg, linen 40%, rgba(255,215,0,0.3) 80%)
+
+
+}
+
+.winter{
+    border-width: 0px 0px 4px 3px;
+    background: linear-gradient(40deg, rgba(240,248,255,100) 40%, rgba(255,215,0,0.3) 80%)
+
+}
+
+img{
+    width: 600px;
+    height: 600px;
+
+    margin: 0px;
+    padding: 0px;
+}
