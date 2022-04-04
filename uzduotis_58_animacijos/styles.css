@@ -1,0 +1,106 @@
+.container{
+
+   display: flex;
+
+    flex-flow: row wrap;
+    justify-content: center;
+
+    align-items: stretch;
+    align-content: space-around;
+
+    gap: 0px
+
+}
+
+@keyframes scroll-down{
+    0% {transform:translateY(0%); opacity: 0;}
+    15%, 85% {opacity: 0.9;}
+    100% {transform:translateY(40%);opacity: 0;}
+}
+
+@keyframes shaky-scroll_down{
+    0% {transform:translateY(0%,0%) opacity: 0;}
+    15%, 85% {opacity: 100;}
+    100% {transform:translateY(100%);opacity: 0;}
+}
+
+.birb{
+    position:sticky;
+    animation-delay: 0.1;
+    animation-name: shaky-scroll_down;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.leaves{
+    position:sticky;
+    animation-delay: 0.1;
+    animation-name: shaky-scroll_down;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.snowing{
+    animation-delay: 0.1;
+    animation-name: scroll-down;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.sun-out{
+    animation-delay: 0.1;
+    animation-name: scroll-down;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.spring, .summer, .autumn, .winter{
+
+    border-color: GoldenRod;
+    border-style: solid;
+    margin: 0px;
+    padding: 10px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 30px;
+
+    height: 32%;
+    width: 32%;
+}
+
+@media only screen and (max-width: 1445px) {
+  img {
+    display: none;
+  }
+}
+
+
+
+.spring{
+    border-width: 9px 0px 0px 10px;
+    background: linear-gradient(150deg, rgba(34,139,34,.25) 40%, rgba(255,215,0,0.3) 80%)
+
+}
+
+.summer{
+    border-width: 8px 7px 0px 0px;
+    background: linear-gradient(300deg, LightYellow 40%, rgba(255,215,0,0.3) 80%)
+}
+
+.autumn{
+    border-width: 0px 6px 5px 0px;
+    background: linear-gradient(340deg, linen 40%, rgba(255,215,0,0.3) 80%)
+}
+
+.winter{
+    border-width: 0px 0px 4px 3px;
+    background: linear-gradient(40deg, rgba(240,248,255,100) 40%, rgba(255,215,0,0.3) 80%)
+}
+
+img{
+    flex: 0 0 32%;                       /* don't grow, don't shrink, width */
+  height: 482px;
+
+
+}
+
+

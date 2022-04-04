@@ -1,0 +1,138 @@
+.container{
+
+    display: grid;
+    grid-template-rows: 33% 33% 33%;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 0%;
+    height:2000px;
+}
+body {
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes scroll-down{
+    0% {transform:translateY(0%); opacity: 0;}
+    15%, 85% {opacity: 0.9;}
+    100% {transform:translateY(10%);opacity: 0;}
+}
+
+@keyframes shaky-scroll_down{
+    0% {transform:translate(0,0); opacity: 0;}
+    15% {transform:translate(600px, 100px);opacity: 100;}
+    30% {transform:translate(0px, 200px)}
+    45% {transform:translate(500px, 350px)}
+    65% {transform:translate(50px, 400px)}
+    85% {transform:translate(500px, 500px); opacity: 80;}
+    90% {transform:translate(300px, 550px);}
+    100% {transform:translate(300px, 550px); transform: scale(3, 1); opacity: 0;}
+}
+
+@keyframes birb-flight{
+    0% {transform:translate(0,0); transform: scaleX(-1);}
+    15% {transform:translate(400px, 100px)}
+    30% {transform:translate(600px, 200px)}
+    45% {transform:translate(300px, 150px); transform: scaleX(-1);}
+    65% {transform:translate(100px, 200px)}
+    85% {transform:translate(500px, 500px)}
+    100% {transform:translate(100px, 200px); transform: scaleX(-1);}
+}
+
+@keyframes sun-shine{
+    0% {transform:translate(0%,30%) }
+    100% {transform:translate(50%)}
+}
+
+@keyframes sin {
+   to {
+     top:20.1px;
+   }
+}
+
+.birb{
+    height: 30%;
+    width: 30%;
+    animation-delay: 0.1;
+    animation-name: birb-flight;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+.leaves{
+    position:sticky;
+    animation-delay: 0.1;
+    animation-name: shaky-scroll_down;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+.snowing{
+    height: 200%;
+    width: 230%;
+    animation-delay: 0.1;
+    animation-name: scroll-down;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.sun-out{
+    position: absolute;
+    animation-delay: 0.1;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-name: sun-shine;
+}
+
+
+.spring, .summer, .autumn, .winter{
+
+    border-color: GoldenRod;
+    border-style: solid;
+
+    padding: 30px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 34px;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 1445px) {
+  img {
+    display: none;
+  }
+}
+
+
+
+.spring{
+    border-width: 9px 0px 0px 10px;
+    background: linear-gradient(150deg, rgba(34,139,34,.25) 40%, rgba(255,215,0,0.3) 80%)
+
+}
+
+.summer{
+    border-width: 8px 7px 0px 0px;
+    background: linear-gradient(300deg, LightYellow 40%, rgba(255,215,0,0.3) 80%)
+}
+
+.autumn{
+    border-width: 0px 6px 5px 0px;
+    background: linear-gradient(340deg, linen 40%, rgba(255,215,0,0.3) 80%)
+}
+
+.winter{
+    border-width: 0px 0px 4px 3px;
+    background: linear-gradient(40deg, rgba(240,248,255,100) 40%, rgba(255,215,0,0.3) 80%)
+}
+
+img{
+    height: 45%;
+    width: 32%;
+    justify-content: bottom;
+}
+
+
+.full{
+    height="100%";
+     width="100%;
+     background-color: rgba(255,215,0,0.3);
+}
